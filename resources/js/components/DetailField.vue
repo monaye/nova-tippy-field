@@ -1,9 +1,17 @@
 <template>
-    <panel-item :field="field" />
+  <panel-item :field="field">
+    <template slot="value">
+      <excerpt
+        :content="field.toolContent"
+        :plain-text="true"
+        :should-show="field.shouldShow"
+      />
+    </template>
+  </panel-item>
 </template>
 
 <script>
 export default {
-    props: ['resource', 'resourceName', 'resourceId', 'field'],
+  props: ['resource', 'resourceName', 'resourceId', 'field'],
 }
 </script>

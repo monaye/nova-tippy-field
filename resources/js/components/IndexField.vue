@@ -3,7 +3,7 @@
             :value="field.value"
             :text="field.text"
             :icon="field.icon"
-            :url="field.url"
+            :iconUrl="field.iconUrl"
             :toolContent="field.toolContent"
             :id="field.id"
             :placement="field.placement"
@@ -13,8 +13,10 @@
 </template>
 
 <script>
+import Tippy from './Tippy';
+
 export default {
-    components : { Tippy }
+    components : { Tippy },
     props: ['resourceName', 'field'],
 }
 </script>

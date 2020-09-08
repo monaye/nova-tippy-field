@@ -5,7 +5,7 @@
         class="nova-simple-tooltip cursor-pointer items-center flex text-90 hover:text-primary mr-3"
         ref="tooltip">
         <span class="mr-2" v-if=" position === 'right'">{{ text }}</span>
-        <img v-if="url" :width="size || 25" :src="url" alt="Image description." />
+        <img v-if="iconUrl" :width="size || 25" :src="iconUrl" alt="Image description." />
         <span class="inline-flex text-70" v-if="icon" v-html="icon"></span>
         <span class="ml-2" v-if=" position === 'left' || !position">{{text}}</span>
 
@@ -18,7 +18,7 @@
 
     export default {
 
-        props: ['value', 'icon', 'url', 'text', 'position', 'toolContent', 'id', 'placement', 'tippyOptions'],
+        props: ['value', 'icon', 'iconUrl', 'text', 'position', 'toolContent', 'id', 'placement', 'tippyOptions'],
 
         mounted() {
             if(this.toolContent) {

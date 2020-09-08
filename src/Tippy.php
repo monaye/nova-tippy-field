@@ -6,6 +6,32 @@ use Laravel\Nova\Fields\Field;
 
 class Tippy extends Field
 {
+
+
+    /**
+     * Whether to always show the content for the field expanded or not.
+     *
+     * @var bool
+     */
+    public $shouldShow = false;
+
+
+    public $position = 'left';
+
+    public $placement = 'top';
+
+    /**
+     * Always show the content of textarea fields inside Nova.
+     *
+     * @return $this
+     */
+    public function shouldShow()
+    {
+        $this->shouldShow = true;
+
+        return $this;
+    }
+
     /**
      * The field's component.
      *
@@ -19,6 +45,9 @@ class Tippy extends Field
 
         $this->withMeta([
             'id' => $resource->id,
+            'shouldShow' => $this->shouldShow,
+            'position' => $this->position,
+            'placement' => $this->placement,
         ]);
     }
 
@@ -50,9 +79,9 @@ class Tippy extends Field
     * @param string  $text
     * @return $this
     */
-    public function url($url)
+    public function iconUrl($iconUrl)
     {
-        return $this->withMeta(['url' => $url]);
+        return $this->withMeta(['iconUrl' => $iconUrl]);
     }
 
     /**
@@ -61,9 +90,11 @@ class Tippy extends Field
      * @param string  $text
      * @return $this
      */
-    public function position($position = 'left')
+    public function position($position)
     {
-        return $this->withMeta(['position' => $position]);
+        $this->position = $position;
+
+        return $this;
     }
 
     public function toolContent($toolContent)
@@ -71,9 +102,11 @@ class Tippy extends Field
         return $this->withMeta(['toolContent' => $toolContent]);
     }
 
-    public function placement($placement = 'top')
+    public function placement($placement)
     {
-        return $this->withMeta(['placement' => $placement]);
+        $this->placement = $placement;
+
+        return $this;
     }
 
     public function tippyOptions($tippyOptions)
