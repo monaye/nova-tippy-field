@@ -16,7 +16,7 @@ class Tippy extends Field
     public $shouldShow = false;
 
 
-    public $position = 'left';
+    public $iconPosition = 'left';
 
     public $placement = 'top';
 
@@ -46,7 +46,7 @@ class Tippy extends Field
         $this->withMeta([
             'id' => $resource->id,
             'shouldShow' => $this->shouldShow,
-            'position' => $this->position,
+            'iconPosition' => $this->iconPosition,
             'placement' => $this->placement,
         ]);
     }
@@ -68,9 +68,9 @@ class Tippy extends Field
      * @param string  $text
      * @return $this
      */
-    public function icon($icon)
+    public function iconPath($iconPath)
     {
-        return $this->withMeta(['icon' => file_get_contents($icon)]);
+        return $this->withMeta(['iconPath' => file_get_contents($iconPath)]);
     }
 
     /**
@@ -90,16 +90,16 @@ class Tippy extends Field
      * @param string  $text
      * @return $this
      */
-    public function position($position)
+    public function iconPosition($iconPosition)
     {
-        $this->position = $position;
+        $this->iconPosition = $iconPosition;
 
         return $this;
     }
 
-    public function toolContent($toolContent)
+    public function tipContent($tipContent)
     {
-        return $this->withMeta(['toolContent' => $toolContent]);
+        return $this->withMeta(['tipContent' => $tipContent]);
     }
 
     public function placement($placement)

@@ -2,7 +2,7 @@
   <panel-item :field="field">
     <template slot="value">
       <excerpt
-        :content="field.toolContent"
+        :content="field.tipContent"
         :plain-text="true"
         :should-show="field.shouldShow"
       />

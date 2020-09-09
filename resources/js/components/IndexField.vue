@@ -2,13 +2,13 @@
         <Tippy
             :value="field.value"
             :text="field.text"
-            :icon="field.icon"
+            :iconPath="field.iconPath"
             :iconUrl="field.iconUrl"
-            :toolContent="field.toolContent"
+            :tipContent="field.tipContent"
             :id="field.id"
             :placement="field.placement"
             :tippyOptions="field.tippyOptions"
-            :position="field.position" >
+            :iconPosition="field.iconPosition" >
         </Tippy>
 </template>
 
