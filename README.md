@@ -80,6 +80,17 @@ Tippy::make('Body')
     ->tippyOptions(['arrow' => false, 'placement' => 'bottom'])
 ```
 
+### shouldShow
+
+Just like the [Laravel Nova TextArea](https://nova.laravel.com/docs/3.0/resources/fields.html#textarea-field) field, on detail screen, by default Nova Tippy Field will hide the content and only show when you click on `Show Content`. You can always show the content in the detail screen.
+
+```php
+Tippy::make('Body')
+    ->text(str_limit($this->message, 40))
+    ->tipContent($this->message)
+    ->shouldShow()
+```
+
 # Author
 
 Hope you find it useful. Feel free to reach out with feedback.
