@@ -20,6 +20,15 @@ class Tippy extends Field
 
     public $placement = 'top';
 
+
+    public function __construct($name, $attribute = null, callable $resolveCallback = null)
+    {
+        parent::__construct($name, $attribute, $resolveCallback);
+
+        $this->textAlign('center');
+
+    }
+
     /**
      * Always show the content of textarea fields inside Nova.
      *

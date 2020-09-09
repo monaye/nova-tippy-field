@@ -1002,7 +1002,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
 
 
 
@@ -5722,11 +5721,11 @@ var render = function() {
     {
       ref: "tooltip",
       staticClass:
-        "nova-simple-tooltip cursor-pointer items-center flex text-90 hover:text-primary mr-3",
+        "nova-simple-tooltip cursor-pointer items-center flex justify-center text-90 hover:text-primary",
       attrs: { id: "nova-simple-tooltip" + _vm.id }
     },
     [
-      _vm.iconPosition === "right"
+      _vm.text && _vm.iconPosition === "right"
         ? _c("span", { staticClass: "mr-2" }, [_vm._v(_vm._s(_vm.text))])
         : _vm._e(),
       _vm._v(" "),
@@ -5747,7 +5746,7 @@ var render = function() {
           })
         : _vm._e(),
       _vm._v(" "),
-      _vm.iconPosition === "left"
+      _vm.text && _vm.iconPosition === "left"
         ? _c("span", { staticClass: "ml-2" }, [_vm._v(_vm._s(_vm.text))])
         : _vm._e()
     ]

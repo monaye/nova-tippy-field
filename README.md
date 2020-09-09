@@ -23,8 +23,8 @@ public function fields(Request $request)
 {
     return [
         Tippy::make('Body')
-            ->text(str_limit($this->message, 40))
-            ->tipContent($this->message)
+            ->text(Str::limit($this->body, 40))
+            ->tipContent($this->body)
     ];
 }
 ```
@@ -41,8 +41,8 @@ You can pass excerpt text or any text you want to display to user as hoverable e
 
 ```php
 Tippy::make('Body')
-    ->text(str_limit($this->message, 40))
-    ->tipContent($this->message)
+    ->text(Str::limit($this->body, 40))
+    ->tipContent($this->body)
 ```
 
 ### tipContent
@@ -51,8 +51,8 @@ Pass the text you'd like to display inside the Tippy tooltip. If tooltip content
 
 ```php
 Tippy::make('Body')
-    ->text(str_limit($this->message, 40)),
-    ->tipContent($this->message)
+    ->text(Str::limit($this->body, 40)),
+    ->tipContent($this->body)
 ```
 
 ### iconPath & iconUrl & iconPosition
@@ -61,8 +61,8 @@ You can directly pass the path of your local SVG file or URL of the icon or both
 
 ```php
 Tippy::make('Body')
-    ->text(str_limit($this->message, 40))
-    ->tipContent($this->message)
+    ->text(Str::limit($this->body, 40))
+    ->tipContent($this->body)
     ->iconUrl(asset('assets/icons/blue-info.svg'))
     ->iconPath(resource_path('icons/eye.svg'))
     ->iconPosition('right')
@@ -75,8 +75,8 @@ You can pass any props directly that available in the [Tippy JS Props](https://a
 
 ```php
 Tippy::make('Body')
-    ->text(str_limit($this->message, 40))
-    ->tipContent($this->message)
+    ->text(Str::limit($this->body, 40))
+    ->tipContent($this->body)
     ->tippyOptions(['arrow' => false, 'placement' => 'bottom'])
 ```
 
@@ -86,8 +86,8 @@ Just like the [Laravel Nova TextArea](https://nova.laravel.com/docs/3.0/resource
 
 ```php
 Tippy::make('Body')
-    ->text(str_limit($this->message, 40))
-    ->tipContent($this->message)
+    ->text(Str::limit($this->body, 40))
+    ->tipContent($this->body)
     ->shouldShow()
 ```
 
