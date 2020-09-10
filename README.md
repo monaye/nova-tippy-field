@@ -3,9 +3,15 @@
 Laravel Nova field to display ![Tippy](https://atomiks.github.io/tippyjs/) tooltip on the resource index.
 
 On detail will display just like Laravel Nova ![Textarea](https://nova.laravel.com/docs/1.0/resources/fields.html#textarea-field).
-
-<!-- ![screenshot of nova simple link button](https://user-images.githubusercontent.com/1147313/91624658-53c37880-e956-11ea-9e34-c9f31c480c3e.png) -->
-
+  
+![tooltip-with-icon-and-text](https://user-images.githubusercontent.com/1147313/92666025-f831ad00-f2bc-11ea-9f72-182d7a28c42c.png)
+  
+![tooltip-with-icon-only](https://user-images.githubusercontent.com/1147313/92666026-f962da00-f2bc-11ea-8183-c793b883ded3.png)
+  
+![tooltip-with-text-only](https://user-images.githubusercontent.com/1147313/92666029-f9fb7080-f2bc-11ea-9ba7-2e8dd1904b75.png)
+  
+![tooltip-with-placement](https://user-images.githubusercontent.com/1147313/92666148-5494cc80-f2bd-11ea-9202-2cf6a15a1e52.png)
+  
 ### Installation
 
 ```bash
@@ -68,6 +74,19 @@ Tippy::make('Body')
     ->iconPosition('right')
 ```
 
+### placement 
+
+placement of the tooltip can be placed in different location. All the available placement position can be found at [Tippy Placement Options](https://atomiks.github.io/tippyjs/#placement)
+
+```php
+Tippy::make('Body')
+    ->iconUrl(asset('assets/icons/blue-info.svg'))
+    ->tipContent($this->body)
+    ->placement('bottom')
+```
+  
+    
+    
 ### tippyOptions
 
 You can pass any props directly that available in the [Tippy JS Props](https://atomiks.github.io/tippyjs/v6/all-props/).
