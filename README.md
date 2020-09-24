@@ -1,8 +1,8 @@
 ## Nova Tippy Field
 
-Laravel Nova field to display ![Tippy](https://atomiks.github.io/tippyjs/) tooltip on the resource index.
+Laravel Nova field to display [Tippy](https://atomiks.github.io/tippyjs/) tooltip on the resource index.
 
-On detail will display just like Laravel Nova ![Textarea](https://nova.laravel.com/docs/1.0/resources/fields.html#textarea-field).
+On detail will display just like Laravel Nova [Textarea](https://nova.laravel.com/docs/1.0/resources/fields.html#textarea-field).
   
 ![tooltip-with-icon-and-text](https://user-images.githubusercontent.com/1147313/92666025-f831ad00-f2bc-11ea-9f72-182d7a28c42c.png)
   
